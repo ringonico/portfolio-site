@@ -19,7 +19,6 @@ const searchData = allArticles.map(a => ({
   summary: a.data.summary,
   thumbnail: a.data.thumbnail,
 }));
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="記事一覧" currentTab="articles">
@@ -44,7 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   <!-- 記事一覧 -->
   <div class="card-grid" id="article-list">
     {allArticles.map((article) => (
-      <a href={`${base}/articles/${article.id}/`} class="card article-card" style="text-decoration:none;color:inherit;"
+      <a href={`/articles/${article.id}/`} class="card article-card" style="text-decoration:none;color:inherit;"
          data-tags={JSON.stringify(article.data.tags)}
          data-title={article.data.title}
          data-summary={article.data.summary}>

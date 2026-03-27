@@ -14,13 +14,12 @@ const { article } = Astro.props;
 const { Content } = await render(article);
 
 const colors = ['pink', 'orange', 'green', 'blue', 'purple', 'cyan'];
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title={article.data.title} description={article.data.summary} currentTab="articles">
   <div class="article-detail">
     <div style="margin-bottom: 1rem;">
-      <a href={`${base}/articles/`} style="font-size:0.9rem;color:var(--c-purple);">← 記事一覧に戻る</a>
+      <a href={"/articles/"} style="font-size:0.9rem;color:var(--c-purple);">← 記事一覧に戻る</a>
     </div>
 
     <h1>{article.data.title}</h1>
@@ -39,7 +38,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
 
     <div style="margin-top:3rem;padding-top:1.5rem;border-top:2px dashed var(--border);">
-      <a href={`${base}/articles/`} style="font-size:0.9rem;color:var(--c-purple);">← 記事一覧に戻る</a>
+      <a href={"/articles/"} style="font-size:0.9rem;color:var(--c-purple);">← 記事一覧に戻る</a>
     </div>
   </div>
 </BaseLayout>
