@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allWorks = (await getCollection('works')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="実績一覧" currentTab="works">
+  <div class="page-header">
+    <h1 style="color: var(--c-orange);">💼 実績一覧</h1>
+    <p class="subtitle">これまでの業務・プロジェクトの実績です</p>
+  </div>
+
+  {allWorks.length === 0 ? (
+    <div class="empty-state">まだ実績が登録されていません。</div>
+  ) : (
+    <div class="card-grid">
+      {allWorks.map((work) => (
+        <div class="card work-card" data-work-id={work.id}>
+          <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-orange), var(--c-yellow));display:flex;align-items:center;justify-content:center;font-size:2.5rem;">💼</div>
+          <div class="card-body">
+            <h3 class="card-title">{work.data.title}</h3>
+            <p class="card-summary">{work.data.summary}</p>
+            {work.data.role && (
+              <p style="font-size:0.85rem;color:var(--text-light);margin-top:0.4rem;">
+                <strong>担当:</strong> {work.data.role}
+              </p>
+            )}
+            <div class="card-meta">
+              {work.data.skills.map((skill) => (
+                <span class="skill-badge">{skill}</span>
+              ))}
+            </div>
+            <button class="work-detail-btn" data-work-id={work.id}
+              style="margin-top:0.8rem;padding:0.4rem 1rem;background:var(--c-orange);color:#fff;border:none;border-radius:var(--radius-sm);cursor:pointer;font-family:var(--font-heading);font-weight:700;font-size:0.85rem;transition:transform 0.2s;">
+              詳しく見る
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- 実績詳細モーダル -->
+  <div class="lightbox-overlay" id="work-modal">
+    <div class="lightbox-content" style="max-width: 650px;">
+      <button class="lightbox-close" id="work-modal-close">&times;</button>
+      <div id="work-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 実績詳細データをJSON埋め込み -->
+  <script define:vars={{ worksData: allWorks.map(w => ({ id: w.id, ...w.data })) }}>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('work-modal');
+      const modalBody = document.getElementById('work-modal-body');
+      const closeBtn = document.getElementById('work-modal-close');
+
+      document.querySelectorAll('.work-detail-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-work-id');
+          const work = worksData.find(w => w.id === id);
+          if (!work) return;
+
+          modalBody.innerHTML = `
+            <h2 style="font-family:var(--font-heading);font-size:1.4rem;margin-bottom:1rem;color:var(--c-orange);">${work.title}</h2>
+            <p style="margin-bottom:0.8rem;">${work.summary}</p>
+            ${work.role ? `<p><strong>🎯 担当範囲:</strong> ${work.role}</p>` : ''}
+            ${work.highlight ? `<p><strong>✨ 工夫した点:</strong> ${work.highlight}</p>` : ''}
+            ${work.learning ? `<p><strong>📚 学び:</strong> ${work.learning}</p>` : ''}
+            ${work.skills.length > 0 ? `
+              <div style="margin-top:1rem;">
+                <strong>🛠 スキル:</strong>
+                <div style="display:flex;flex-wrap:wrap;gap:0.3rem;margin-top:0.3rem;">
+                  ${work.skills.map(s => `<span class="skill-badge">${s}</span>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+          `;
+          modal.classList.add('active');
+        });
+      });
+
+      closeBtn?.addEventListener('click', () => modal.classList.remove('active'));
+      modal?.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+    });
+  </script>
+</BaseLayout>

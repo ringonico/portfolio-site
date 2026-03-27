@@ -1,0 +1,77 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  currentTab?: string;
+}
+
+const { title, description = 'ゲームプランナーのポートフォリオサイト', currentTab = '' } = Astro.props;
+
+const tabs = [
+  { href: '/', label: '自己紹介', icon: '👤', id: 'about', color: 'var(--tab-about)' },
+  { href: '/works/', label: '実績一覧', icon: '💼', id: 'works', color: 'var(--tab-works)' },
+  { href: '/games/', label: '制作ゲーム', icon: '🎮', id: 'games', color: 'var(--tab-games)' },
+  { href: '/plans/', label: '企画書', icon: '📝', id: 'plans', color: 'var(--tab-plans)' },
+  { href: '/articles/', label: '記事', icon: '📰', id: 'articles', color: 'var(--tab-articles)' },
+];
+
+const siteTitle = 'Game Planner Portfolio';
+const fullTitle = currentTab === 'about' ? siteTitle : `${title} | ${siteTitle}`;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <style is:inline>
+    /* ちらつき防止: カードグリッドの初期レイアウトを即時適用 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    @media (max-width: 600px) {
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 420px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-title"><a href="/">🎲 {siteTitle}</a></div>
+      <nav class="tab-nav">
+        {tabs.map(tab => (
+          <a
+            href={tab.href}
+            class:list={[{ active: currentTab === tab.id }]}
+            style={currentTab === tab.id ? `--current-tab-color: ${tab.color}` : ''}
+          >
+            <span class="tab-icon">{tab.icon}</span>
+            {tab.label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Game Planner Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>

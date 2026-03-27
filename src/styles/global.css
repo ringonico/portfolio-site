@@ -1,0 +1,722 @@
+/* ============================
+   Game Planner Portfolio
+   Global Styles
+   ============================ */
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&family=Zen+Maru+Gothic:wght@400;700&family=Stick&display=swap');
+
+:root {
+  /* カラフルパレット */
+  --c-pink: #ff6b9d;
+  --c-orange: #ff8a5c;
+  --c-yellow: #ffd93d;
+  --c-green: #6bcb77;
+  --c-blue: #4d96ff;
+  --c-purple: #9b59b6;
+  --c-cyan: #00d2d3;
+  --c-red: #ee5a5a;
+
+  /* ベースカラー */
+  --bg: #fefcf3;
+  --bg-card: #ffffff;
+  --bg-code: #f8f5ee;
+  --text: #2d3436;
+  --text-light: #636e72;
+  --text-muted: #b2bec3;
+  --border: #dfe6e9;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --shadow-hover: rgba(0, 0, 0, 0.15);
+
+  /* タブカラー（各ページ） */
+  --tab-about: var(--c-pink);
+  --tab-works: var(--c-orange);
+  --tab-games: var(--c-blue);
+  --tab-plans: var(--c-green);
+  --tab-articles: var(--c-purple);
+
+  /* フォント */
+  --font-heading: 'M PLUS Rounded 1c', 'Zen Maru Gothic', sans-serif;
+  --font-body: 'Zen Maru Gothic', 'M PLUS Rounded 1c', sans-serif;
+  --font-accent: 'Stick', sans-serif;
+
+  /* サイズ */
+  --max-width: 1100px;
+  --header-height: 64px;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.4;
+}
+
+a {
+  color: var(--c-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--c-pink);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================
+   ヘッダー & ナビ
+   ============================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 3px solid var(--border);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-title {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  padding: 0.5rem 0 0;
+  color: var(--text);
+  text-align: center;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: var(--c-pink);
+}
+
+.tab-nav {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.tab-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-nav a {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.6rem 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab-nav a:hover {
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.tab-nav a.active {
+  color: var(--text);
+  border-bottom-color: var(--current-tab-color, var(--c-pink));
+}
+
+.tab-nav .tab-icon {
+  font-size: 1.1rem;
+}
+
+/* ============================
+   メインコンテンツ
+   ============================ */
+.main-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+/* ============================
+   ページヘッダー
+   ============================ */
+.page-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed var(--border);
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.page-header .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-top: 0.3rem;
+}
+
+/* ============================
+   カードUI共通
+   ============================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--shadow-hover);
+}
+
+.card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--c-cyan), var(--c-purple));
+}
+
+.card-body {
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.card-summary {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+/* ============================
+   タグ
+   ============================ */
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background: var(--c-yellow);
+  color: var(--text);
+  line-height: 1.6;
+  transition: transform 0.15s;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+}
+
+.tag[data-color="pink"]   { background: var(--c-pink); color: #fff; }
+.tag[data-color="orange"] { background: var(--c-orange); color: #fff; }
+.tag[data-color="green"]  { background: var(--c-green); color: #fff; }
+.tag[data-color="blue"]   { background: var(--c-blue); color: #fff; }
+.tag[data-color="purple"] { background: var(--c-purple); color: #fff; }
+.tag[data-color="cyan"]   { background: var(--c-cyan); color: #fff; }
+.tag[data-color="red"]    { background: var(--c-red); color: #fff; }
+
+/* ============================
+   検索
+   ============================ */
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--c-blue);
+}
+
+/* ============================
+   タグフィルター
+   ============================ */
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag-filter-btn {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-card);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tag-filter-btn:hover {
+  border-color: var(--c-blue);
+  color: var(--c-blue);
+}
+
+.tag-filter-btn.active {
+  background: var(--c-blue);
+  border-color: var(--c-blue);
+  color: #fff;
+}
+
+/* ============================
+   セクション見出し
+   ============================ */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 2.5rem 0 1rem;
+  padding-left: 0.8rem;
+  border-left: 5px solid var(--c-pink);
+  line-height: 1.4;
+}
+
+.section-title.orange { border-left-color: var(--c-orange); }
+.section-title.green  { border-left-color: var(--c-green); }
+.section-title.blue   { border-left-color: var(--c-blue); }
+.section-title.purple { border-left-color: var(--c-purple); }
+
+/* ============================
+   記事詳細
+   ============================ */
+.article-detail {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.article-detail h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.article-detail .meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.article-content {
+  line-height: 2;
+  font-size: 1rem;
+}
+
+.article-content h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: 2rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid var(--c-yellow);
+}
+
+.article-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+}
+
+.article-content ul, .article-content ol {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+.article-content code {
+  background: var(--bg-code);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.article-content blockquote {
+  border-left: 4px solid var(--c-purple);
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  background: rgba(155, 89, 182, 0.06);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ============================
+   ライトボックス
+   ============================ */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem;
+  position: relative;
+  min-width: min(500px, 90vw);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--c-red);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  z-index: 10;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.1);
+}
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: var(--c-blue);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+  z-index: 10;
+}
+
+.lightbox-nav:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: var(--c-purple);
+}
+
+.lightbox-prev { left: -22px; }
+.lightbox-next { right: -22px; }
+
+/* ============================
+   フッター
+   ============================ */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 2px dashed var(--border);
+  margin-top: 2rem;
+}
+
+/* ============================
+   プロフィール
+   ============================ */
+.profile-hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.profile-hero h1 {
+  font-family: var(--font-accent);
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, var(--c-pink), var(--c-blue), var(--c-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-hero .catch {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-top: 0.3rem;
+}
+
+.profile-section {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-section h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.profile-section .content {
+  line-height: 2;
+}
+
+/* ============================
+   プレイゲーム一覧
+   ============================ */
+/* ============================
+   プレイゲーム（ジャンル別箇条書き）
+   ============================ */
+.played-games-by-genre {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.genre-block {
+  min-width: 0;
+}
+
+.genre-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  padding: 0.35rem 1rem;
+  background: linear-gradient(90deg, var(--c-yellow), transparent);
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+  display: inline-block;
+}
+
+.genre-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.1rem 1.5rem;
+}
+
+.genre-list li {
+  padding: 0.3rem 0;
+  padding-left: 1.1rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.genre-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  top: 0.35rem;
+}
+
+.game-link-title {
+  color: var(--c-blue);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--c-blue);
+  transition: opacity 0.2s;
+}
+
+.game-link-title:hover {
+  opacity: 0.7;
+}
+
+.game-plain-title {
+  color: var(--text);
+}
+
+/* ============================
+   スキルバッジ
+   ============================ */
+.skill-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  background: var(--bg-code);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+
+/* ============================
+   空状態
+   ============================ */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* ============================
+   レスポンシブ
+   ============================ */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .genre-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .tab-nav a {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .lightbox-content {
+    padding: 1.2rem;
+    max-width: 95vw;
+  }
+
+  .lightbox-prev { left: 4px; }
+  .lightbox-next { right: 4px; }
+
+  .lightbox-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .article-detail h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-nav {
+    gap: 0;
+  }
+
+  .tab-nav a {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .tab-nav .tab-icon {
+    display: none;
+  }
+}

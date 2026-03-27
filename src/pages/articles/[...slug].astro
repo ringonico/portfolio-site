@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+const colors = ['pink', 'orange', 'green', 'blue', 'purple', 'cyan'];
+---
+
+<BaseLayout title={article.data.title} description={article.data.summary} currentTab="articles">
+  <div class="article-detail">
+    <div style="margin-bottom: 1rem;">
+      <a href="/articles/" style="font-size:0.9rem;color:var(--c-purple);">← 記事一覧に戻る</a>
+    </div>
+
+    <h1>{article.data.title}</h1>
+
+    <div class="meta">
+      <span>📅 {article.data.date}</span>
+      <span>📁 {article.data.category}</span>
+      {article.data.tags.map((tag) => {
+        const color = colors[tag.length % colors.length];
+        return <span class="tag" data-color={color}>{tag}</span>;
+      })}
+    </div>
+
+    <div class="article-content">
+      <Content />
+    </div>
+
+    <div style="margin-top:3rem;padding-top:1.5rem;border-top:2px dashed var(--border);">
+      <a href="/articles/" style="font-size:0.9rem;color:var(--c-purple);">← 記事一覧に戻る</a>
+    </div>
+  </div>
+</BaseLayout>

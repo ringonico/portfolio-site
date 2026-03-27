@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import playedGames from '../data/played-games.json';
+
+// プロフィールMarkdownを読み込み
+const profileFiles = import.meta.glob('../content/profile/intro.md', { eager: true });
+const profileEntry = Object.values(profileFiles)[0] as any;
+const profileFrontmatter = profileEntry.frontmatter;
+const ProfileContent = profileEntry.Content;
+
+// プレイゲームをジャンル別にグループ化
+const gamesByGenre: Record<string, typeof playedGames> = {};
+for (const game of playedGames) {
+  if (!gamesByGenre[game.genre]) gamesByGenre[game.genre] = [];
+  gamesByGenre[game.genre].push(game);
+}
+const genreEntries = Object.entries(gamesByGenre);
+---
+
+<BaseLayout title="自己紹介" currentTab="about">
+  <div class="profile-hero">
+    <h1>{profileFrontmatter.name}</h1>
+    <p class="catch">{profileFrontmatter.catch}</p>
+  </div>
+
+  <div class="profile-section">
+    <div class="content">
+      <ProfileContent />
+    </div>
+  </div>
+
+  <h2 class="section-title blue">🎮 プレイしたゲーム一覧</h2>
+  <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">
+    私が遊んだゲームをジャンル別にまとめています。<span style="color: var(--c-blue); font-weight: 700;">青いタイトル</span>をクリックすると分析記事が読めます。
+  </p>
+
+  <div class="played-games-by-genre">
+    {genreEntries.map(([genre, games]) => (
+      <div class="genre-block">
+        <h3 class="genre-title">{genre}</h3>
+        <ul class="genre-list">
+          {games.map((game) => (
+            <li>
+              {game.articleSlug ? (
+                <a href={`/articles/${game.articleSlug}/`} class="game-link-title">{game.name}</a>
+              ) : (
+                <span class="game-plain-title">{game.name}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

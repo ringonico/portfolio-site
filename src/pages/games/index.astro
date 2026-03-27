@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allGames = (await getCollection('games')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="制作ゲーム一覧" currentTab="games">
+  <div class="page-header">
+    <h1 style="color: var(--c-blue);">🎮 制作ゲーム一覧</h1>
+    <p class="subtitle">個人制作・チーム制作のゲームをまとめています</p>
+  </div>
+
+  {allGames.length === 0 ? (
+    <div class="empty-state">まだゲームが登録されていません。</div>
+  ) : (
+    <div class="card-grid">
+      {allGames.map((game) => (
+        <div class="card">
+          <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-blue), var(--c-cyan));display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🎮</div>
+          <div class="card-body">
+            <h3 class="card-title">{game.data.title}</h3>
+            <p class="card-summary">{game.data.summary}</p>
+            {game.data.period && (
+              <p style="font-size:0.85rem;color:var(--text-light);margin-top:0.4rem;">
+                📅 {game.data.period}
+              </p>
+            )}
+            {game.data.role && (
+              <p style="font-size:0.85rem;color:var(--text-light);">
+                🎯 {game.data.role}
+              </p>
+            )}
+            <div class="card-meta">
+              {game.data.tools.map((tool) => (
+                <span class="skill-badge">{tool}</span>
+              ))}
+            </div>
+            {game.data.url ? (
+              <a href={game.data.url} target="_blank" rel="noopener noreferrer"
+                style="display:inline-block;margin-top:0.8rem;padding:0.4rem 1rem;background:var(--c-blue);color:#fff;border-radius:var(--radius-sm);font-family:var(--font-heading);font-weight:700;font-size:0.85rem;">
+                🔗 プレイする
+              </a>
+            ) : (
+              <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.8rem;">（公開URL準備中）</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</BaseLayout>

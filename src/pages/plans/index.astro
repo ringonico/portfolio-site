@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPlans = (await getCollection('plans')).sort((a, b) => a.data.order - b.data.order);
+
+// ライトボックス用にデータを準備
+const plansData = allPlans.map(p => ({
+  id: p.id,
+  title: p.data.title,
+  summary: p.data.summary,
+  genre: p.data.genre,
+  purpose: p.data.purpose,
+  point: p.data.point,
+  pdfUrl: p.data.pdfUrl || '',
+}));
+---
+
+<BaseLayout title="企画書一覧" currentTab="plans">
+  <div class="page-header">
+    <h1 style="color: var(--c-green);">📝 企画書一覧</h1>
+    <p class="subtitle">ゲームの企画書・コンセプトドキュメントです。クリックで詳細を表示します。</p>
+  </div>
+
+  {allPlans.length === 0 ? (
+    <div class="empty-state">まだ企画書が登録されていません。</div>
+  ) : (
+    <div class="card-grid">
+      {allPlans.map((plan, index) => (
+        <div class="card plan-card" data-plan-index={index} style="cursor:pointer;">
+          <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-green), var(--c-yellow));display:flex;align-items:center;justify-content:center;font-size:2.5rem;">📝</div>
+          <div class="card-body">
+            <h3 class="card-title">{plan.data.title}</h3>
+            <p class="card-summary">{plan.data.summary}</p>
+            {plan.data.genre && (
+              <div class="card-meta" style="margin-top:0.5rem;">
+                <span class="tag" data-color="green">{plan.data.genre}</span>
+              </div>
+            )}
+            <p style="font-size:0.8rem;color:var(--c-green);margin-top:0.5rem;font-weight:700;">
+              クリックして詳細を見る →
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <!-- 企画書ライトボックス -->
+  <div class="lightbox-overlay" id="plan-lightbox">
+    <button class="lightbox-nav lightbox-prev" id="plan-prev">◀</button>
+    <div class="lightbox-content" style="max-width: 700px;">
+      <button class="lightbox-close" id="plan-close">&times;</button>
+      <div id="plan-lightbox-body"></div>
+      <div style="text-align:center;margin-top:1rem;font-size:0.85rem;color:var(--text-muted);">
+        <span id="plan-counter"></span>
+      </div>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="plan-next">▶</button>
+  </div>
+
+  <script define:vars={{ plansData }}>
+    document.addEventListener('DOMContentLoaded', () => {
+      const overlay = document.getElementById('plan-lightbox');
+      const body = document.getElementById('plan-lightbox-body');
+      const counter = document.getElementById('plan-counter');
+      const closeBtn = document.getElementById('plan-close');
+      const prevBtn = document.getElementById('plan-prev');
+      const nextBtn = document.getElementById('plan-next');
+      let currentIndex = 0;
+
+      function renderPlan(index) {
+        const plan = plansData[index];
+        if (!plan) return;
+        currentIndex = index;
+        body.innerHTML = `
+          <h2 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--c-green);margin-bottom:0.5rem;">${plan.title}</h2>
+          ${plan.genre ? `<span class="tag" data-color="green" style="margin-bottom:1rem;display:inline-block;">${plan.genre}</span>` : ''}
+          <p style="margin:0.8rem 0;">${plan.summary}</p>
+          ${plan.purpose ? `<p><strong>🎯 目的:</strong> ${plan.purpose}</p>` : ''}
+          ${plan.point ? `<p><strong>✨ ポイント:</strong> ${plan.point}</p>` : ''}
+          ${plan.pdfUrl ? `<a href="${plan.pdfUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;padding:0.5rem 1.2rem;background:var(--c-green);color:#fff;border-radius:var(--radius-sm);font-weight:700;">📄 PDFを見る</a>` : ''}
+        `;
+        counter.textContent = `${index + 1} / ${plansData.length}`;
+        prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
+        nextBtn.style.visibility = index < plansData.length - 1 ? 'visible' : 'hidden';
+      }
+
+      document.querySelectorAll('.plan-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const idx = parseInt(card.getAttribute('data-plan-index'));
+          renderPlan(idx);
+          overlay.classList.add('active');
+        });
+      });
+
+      prevBtn?.addEventListener('click', (e) => { e.stopPropagation(); renderPlan(currentIndex - 1); });
+      nextBtn?.addEventListener('click', (e) => { e.stopPropagation(); renderPlan(currentIndex + 1); });
+      closeBtn?.addEventListener('click', () => overlay.classList.remove('active'));
+      overlay?.addEventListener('click', (e) => { if (e.target === overlay) overlay.classList.remove('active'); });
+
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('active')) return;
+        if (e.key === 'Escape') overlay.classList.remove('active');
+        if (e.key === 'ArrowLeft' && currentIndex > 0) renderPlan(currentIndex - 1);
+        if (e.key === 'ArrowRight' && currentIndex < plansData.length - 1) renderPlan(currentIndex + 1);
+      });
+    });
+  </script>
+</BaseLayout>

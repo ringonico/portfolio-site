@@ -1,0 +1,72 @@
+[
+  {
+    "name": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+    "genre": "アクションアドベンチャー",
+    "articleSlug": "zelda-totk-analysis"
+  },
+  {
+    "name": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+    "genre": "アクションアドベンチャー",
+    "articleSlug": ""
+  },
+  {
+    "name": "ELDEN RING",
+    "genre": "アクションRPG",
+    "articleSlug": "elden-ring-analysis"
+  },
+  {
+    "name": "モンスターハンターワイルズ",
+    "genre": "アクションRPG",
+    "articleSlug": ""
+  },
+  {
+    "name": "スプラトゥーン3",
+    "genre": "シューター",
+    "articleSlug": ""
+  },
+  {
+    "name": "Apex Legends",
+    "genre": "シューター",
+    "articleSlug": ""
+  },
+  {
+    "name": "Hades",
+    "genre": "ローグライク",
+    "articleSlug": ""
+  },
+  {
+    "name": "Slay the Spire",
+    "genre": "ローグライク",
+    "articleSlug": ""
+  },
+  {
+    "name": "ペルソナ5 ザ・ロイヤル",
+    "genre": "RPG",
+    "articleSlug": ""
+  },
+  {
+    "name": "ファイナルファンタジーXVI",
+    "genre": "RPG",
+    "articleSlug": ""
+  },
+  {
+    "name": "Celeste",
+    "genre": "アクション",
+    "articleSlug": ""
+  },
+  {
+    "name": "Hollow Knight",
+    "genre": "アクション",
+    "articleSlug": ""
+  },
+  {
+    "name": "あつまれ どうぶつの森",
+    "genre": "シミュレーション",
+    "articleSlug": ""
+  },
+  {
+    "name": "Stardew Valley",
+    "genre": "シミュレーション",
+    "articleSlug": ""
+  }
+]
