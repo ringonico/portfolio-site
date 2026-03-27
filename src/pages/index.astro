@@ -15,6 +15,7 @@ for (const game of playedGames) {
   gamesByGenre[game.genre].push(game);
 }
 const genreEntries = Object.entries(gamesByGenre);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="自己紹介" currentTab="about">
@@ -42,7 +43,7 @@ const genreEntries = Object.entries(gamesByGenre);
           {games.map((game) => (
             <li>
               {game.articleSlug ? (
-                <a href={`/articles/${game.articleSlug}/`} class="game-link-title">{game.name}</a>
+                <a href={`${base}/articles/${game.articleSlug}/`} class="game-link-title">{game.name}</a>
               ) : (
                 <span class="game-plain-title">{game.name}</span>
               )}

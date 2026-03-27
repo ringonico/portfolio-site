@@ -9,12 +9,14 @@ interface Props {
 
 const { title, description = 'ゲームプランナーのポートフォリオサイト', currentTab = '' } = Astro.props;
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const tabs = [
-  { href: '/', label: '自己紹介', icon: '👤', id: 'about', color: 'var(--tab-about)' },
-  { href: '/works/', label: '実績一覧', icon: '💼', id: 'works', color: 'var(--tab-works)' },
-  { href: '/games/', label: '制作ゲーム', icon: '🎮', id: 'games', color: 'var(--tab-games)' },
-  { href: '/plans/', label: '企画書', icon: '📝', id: 'plans', color: 'var(--tab-plans)' },
-  { href: '/articles/', label: '記事', icon: '📰', id: 'articles', color: 'var(--tab-articles)' },
+  { href: `${base}/`, label: '自己紹介', icon: '👤', id: 'about', color: 'var(--tab-about)' },
+  { href: `${base}/works/`, label: '実績一覧', icon: '💼', id: 'works', color: 'var(--tab-works)' },
+  { href: `${base}/games/`, label: '制作ゲーム', icon: '🎮', id: 'games', color: 'var(--tab-games)' },
+  { href: `${base}/plans/`, label: '企画書', icon: '📝', id: 'plans', color: 'var(--tab-plans)' },
+  { href: `${base}/articles/`, label: '記事', icon: '📰', id: 'articles', color: 'var(--tab-articles)' },
 ];
 
 const siteTitle = 'Game Planner Portfolio';
@@ -31,7 +33,7 @@ const fullTitle = currentTab === 'about' ? siteTitle : `${title} | ${siteTitle}`
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
   <style is:inline>
     /* ちらつき防止: カードグリッドの初期レイアウトを即時適用 */
     .card-grid {
@@ -50,7 +52,7 @@ const fullTitle = currentTab === 'about' ? siteTitle : `${title} | ${siteTitle}`
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <div class="site-title"><a href="/">🎲 {siteTitle}</a></div>
+      <div class="site-title"><a href={`${base}/`}>🎲 {siteTitle}</a></div>
       <nav class="tab-nav">
         {tabs.map(tab => (
           <a
