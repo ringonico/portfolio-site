@@ -1,73 +1,60 @@
-# ポートフォリオサイト 編集・公開ガイド
+# ポートフォリオサイト 更新ガイド
 
-このガイドでは「何をどう触ればいいか」をすべて説明します。
+このガイドでは、サイトの日常的な更新方法をまとめています。
+文章の編集、記事の追加、画像の差し替え、フォントや色の変更など、
 プログラミングの知識がなくても、このガイドに沿えば更新できます。
+
+> 基本的なファイル構成や公開方法については [GUIDE-BASIC.md](./GUIDE-BASIC.md) を参照してください。
 
 ---
 
 ## 目次
 
-1. [ファイル構成の全体像](#1-ファイル構成の全体像)
+1. [更新の流れ（日常運用）](#1-更新の流れ日常運用)
 2. [文章を変える方法](#2-文章を変える方法)
 3. [新しい項目・記事を作る方法](#3-新しい項目記事を作る方法)
 4. [画像を入れる方法](#4-画像を入れる方法)
 5. [文字のフォント・大きさ・配置を変える方法](#5-文字のフォント大きさ配置を変える方法)
 6. [色を変える方法](#6-色を変える方法)
-7. [Markdownの書き方](#7-markdownの書き方)
-8. [GitHub Pagesで公開する方法](#8-github-pagesで公開する方法)
-9. [更新の流れ（日常運用）](#9-更新の流れ日常運用)
-10. [よくある質問](#10-よくある質問)
+7. [記事の本文で使えるHTML表現](#7-記事の本文で使えるhtml表現)
 
 ---
 
-## 1. ファイル構成の全体像
+## 1. 更新の流れ（日常運用）
 
-```
-ポートフォリオ/
-├── public/                      ← 画像などの置き場
-│   └── images/
-│       ├── articles/            ← 記事のサムネイル
-│       ├── works/               ← 実績のサムネイル
-│       ├── games/               ← 制作ゲームのサムネイル
-│       └── plans/               ← 企画書のサムネイル
-│
-├── src/
-│   ├── content/                 ← ★ コンテンツ（ここを主に触る）
-│   │   ├── profile/
-│   │   │   └── intro.md         ← 自己紹介ページの文章
-│   │   ├── articles/            ← 記事（Markdownファイル）
-│   │   ├── works/               ← 実績（Markdownファイル）
-│   │   ├── games/               ← 制作ゲーム（Markdownファイル）
-│   │   └── plans/               ← 企画書（Markdownファイル）
-│   │
-│   ├── data/
-│   │   └── played-games.json    ← プレイしたゲーム一覧
-│   │
-│   ├── styles/
-│   │   └── global.css           ← デザイン（色・フォント・配置）
-│   │
-│   ├── layouts/
-│   │   └── BaseLayout.astro     ← サイト名・ナビゲーション
-│   │
-│   └── pages/                   ← ページの構造（基本触らなくてOK）
-│
-└── astro.config.mjs             ← 公開設定（GitHub Pages用）
+サイトを更新するときの手順です。
+
+### ローカルでの確認
+
+```bash
+# 1. 開発サーバーを起動（変更がリアルタイムで反映される）
+npm run dev
+
+# 2. ブラウザで http://localhost:4321 を開いて確認
+
+# 3. 確認できたら Ctrl+C でサーバーを止める
 ```
 
-### 触るファイルの早見表
+### GitHubにアップ（公開反映）
 
-| やりたいこと | 触るファイル |
-|---|---|
-| 自己紹介を書き換える | `src/content/profile/intro.md` |
-| 記事を追加する | `src/content/articles/` に `.md` を新規作成 |
-| 実績を追加する | `src/content/works/` に `.md` を新規作成 |
-| 制作ゲームを追加する | `src/content/games/` に `.md` を新規作成 |
-| 企画書を追加する | `src/content/plans/` に `.md` を新規作成 |
-| プレイゲーム一覧を追加する | `src/data/played-games.json` を編集 |
-| 画像を追加する | `public/images/` フォルダに画像を置く |
-| サイト名を変える | `src/layouts/BaseLayout.astro` の `siteTitle` |
-| 色を変える | `src/styles/global.css` の `:root` 内の変数 |
-| フォントを変える | `src/styles/global.css` の `--font-heading` 等 |
+```bash
+# 1. 変更したファイルを確認
+git status
+
+# 2. 変更を追加
+git add .
+
+# 3. コミット（メッセージは何を変えたか書く）
+git commit -m "記事を追加"
+
+# 4. アップロード → 自動でサイトに反映される
+git push
+```
+
+> **push するたびに自動でサイトが更新されます。**
+> ビルドには1〜3分ほどかかります。
+>
+> 公開URL：https://gameplanner-ringonico.pages.dev/
 
 ---
 
@@ -446,28 +433,6 @@ text-align: left;
 text-align: right;
 ```
 
-**Markdown内で特定の段落だけ中央揃えにしたい場合：**
-
-```markdown
-<div style="text-align: center;">
-
-この文章は中央揃えになります
-
-</div>
-```
-
-### 5-4. 記事の本文中で文字サイズ・色を変えたい場合
-
-Markdown内で直接HTMLを書くこともできます：
-
-```markdown
-普通のテキスト
-
-<span style="font-size: 1.5rem; color: #ff6b9d;">大きくてピンクの文字</span>
-
-<div style="font-size: 0.8rem; color: gray;">小さくてグレーの補足テキスト</div>
-```
-
 ---
 
 ## 6. 色を変える方法
@@ -514,264 +479,24 @@ Markdown内で直接HTMLを書くこともできます：
 
 ---
 
-## 7. Markdownの書き方
+## 7. 記事の本文で使えるHTML表現
 
-記事や各コンテンツの本文はMarkdown記法で書きます。
-よく使う書き方をまとめます。
-
-### 7-1. 基本の書き方
+Markdown内で特定の段落だけ中央揃えにしたい場合：
 
 ```markdown
-## 大見出し
-### 中見出し
-#### 小見出し
+<div style="text-align: center;">
 
-普通の文章はそのまま書けます。
+この文章は中央揃えになります
 
-段落を分けるには、1行空けます。
-
-**太字テキスト**
-
-*斜体テキスト*
-
-~~打ち消し線~~
-
-[リンクテキスト](https://example.com)
-
-![画像の説明](/images/articles/photo.png)
+</div>
 ```
 
-### 7-2. 箇条書き
+文字サイズ・色を変えたい場合：
 
 ```markdown
-- 項目1
-- 項目2
-  - サブ項目（先頭にスペース2つ）
-- 項目3
+普通のテキスト
 
-1. 番号付き項目1
-2. 番号付き項目2
-3. 番号付き項目3
-```
+<span style="font-size: 1.5rem; color: #ff6b9d;">大きくてピンクの文字</span>
 
-### 7-3. 表（テーブル）
-
-```markdown
-| 列1 | 列2 | 列3 |
-|-----|-----|-----|
-| A   | B   | C   |
-| D   | E   | F   |
-```
-
-### 7-4. 引用
-
-```markdown
-> これは引用文です。
-> 他の人の言葉や、注意書きに使えます。
-```
-
-### 7-5. コードブロック
-
-````markdown
-```
-ここにコードを書く
-```
-````
-
-### 7-6. 水平線（区切り線）
-
-```markdown
----
-```
-
----
-
-## 8. GitHub Pagesで公開する方法
-
-### 8-1. 事前準備
-
-- [GitHub](https://github.com/) のアカウントを作る（無料）
-- [Git](https://git-scm.com/) をインストールする
-- [Node.js](https://nodejs.org/) v22 以上をインストールする
-
-### 8-2. 公開手順（初回）
-
-#### ステップ1：GitHubにリポジトリを作る
-
-1. GitHub にログイン
-2. 右上の「+」→「New repository」
-3. Repository name を入力（例：`portfolio`）
-4. 「Public」を選択
-5. 「Create repository」をクリック
-
-#### ステップ2：astro.config.mjs を自分のURLに変更
-
-`astro.config.mjs` を開いて `site` を書き換えます：
-
-```javascript
-// ① リポジトリ名が「USERNAME.github.io」の場合（個人サイト）
-export default defineConfig({
-  site: 'https://あなたのユーザー名.github.io',
-  output: 'static',
-  build: { assets: '_assets' },
-});
-
-// ② リポジトリ名がそれ以外の場合（例：portfolio）
-export default defineConfig({
-  site: 'https://あなたのユーザー名.github.io',
-  base: '/portfolio',       // ← リポジトリ名を書く
-  output: 'static',
-  build: { assets: '_assets' },
-});
-```
-
-> **注意：** ② の場合、URLは `https://あなたのユーザー名.github.io/portfolio/` になります。
-
-#### ステップ3：コードをGitHubにアップする
-
-ターミナル（コマンドプロンプト）で、ポートフォリオのフォルダに移動してから：
-
-```bash
-# Gitを初期化
-git init
-
-# すべてのファイルを追加
-git add .
-
-# 最初のコミット
-git commit -m "Initial commit"
-
-# mainブランチにする
-git branch -M main
-
-# GitHubのリポジトリと接続（URLは自分のものに変える）
-git remote add origin https://github.com/あなたのユーザー名/portfolio.git
-
-# アップロード
-git push -u origin main
-```
-
-#### ステップ4：GitHub Pagesを有効にする
-
-1. GitHubのリポジトリページに行く
-2. 「Settings」タブをクリック
-3. 左メニューの「Pages」をクリック
-4. 「Source」を **「GitHub Actions」** に変更
-5. これだけでOK！
-
-#### ステップ5：公開を確認
-
-- push するとGitHub Actionsが自動でビルド＆デプロイします
-- リポジトリの「Actions」タブでビルド状況が見られます
-- 緑のチェックマークが付いたら公開完了！
-- `https://あなたのユーザー名.github.io/portfolio/` にアクセスして確認
-
-### 8-3. base を設定した場合の注意点
-
-`astro.config.mjs` に `base: '/portfolio'` を設定した場合、
-サイト内のすべてのリンクに自動で `/portfolio` が追加されます。
-
-ただし、**画像のパスやfrontmatterの `thumbnail`** は手動で合わせる必要があります：
-
-```markdown
-# base なし → そのまま
-thumbnail: "/images/articles/my-pic.png"
-
-# base: '/portfolio' あり → 先頭に base を付ける
-thumbnail: "/portfolio/images/articles/my-pic.png"
-```
-
-> もしくは、リポジトリ名を `ユーザー名.github.io` にすれば `base` は不要で、
-> この問題自体が発生しません（おすすめ）。
-
----
-
-## 9. 更新の流れ（日常運用）
-
-サイトを更新するときの手順です。
-
-### ローカルでの確認
-
-```bash
-# 1. 開発サーバーを起動（変更がリアルタイムで反映される）
-npm run dev
-
-# 2. ブラウザで http://localhost:4321 を開いて確認
-
-# 3. 確認できたら Ctrl+C でサーバーを止める
-```
-
-### GitHubにアップ（公開反映）
-
-```bash
-# 1. 変更したファイルを確認
-git status
-
-# 2. 変更を追加
-git add .
-
-# 3. コミット（メッセージは何を変えたか書く）
-git commit -m "記事を追加"
-
-# 4. アップロード → 自動でサイトに反映される
-git push
-```
-
-> **push するたびに自動でサイトが更新されます。**
-> ビルドには1〜3分ほどかかります。
-
----
-
-## 10. よくある質問
-
-### Q. ファイル名は日本語でもいい？
-
-**A. 英語にしてください。** `.md` のファイル名はURLの一部になるため、
-英語で `-` 区切りにしてください（例：`my-first-article.md`）。
-
-### Q. frontmatter（`---`）の書き方を間違えたらどうなる？
-
-**A. ビルドエラーになります。** よくあるミス：
-- `tags` の `[]` や `""` が抜けている
-- コロン `:` の後にスペースがない
-- 日本語を `""` で囲んでいない
-
-### Q. 記事の順番を変えたい
-
-**A.**
-- 記事は `date`（日付）が新しい順に自動で並びます
-- 実績・制作ゲーム・企画書は `order` の数字が小さい順に並びます
-
-### Q. タグを新しく作りたい
-
-**A. frontmatterの `tags` に新しいタグ名を書くだけです。**
-自動的にタグ一覧に表示されます。
-
-```markdown
-tags: ["新しいタグ名", "既存のタグ"]
-```
-
-### Q. デフォルトのサムネイルを変えたい
-
-**A.** 好きな画像を `public/images/articles/default.png` として置けば、
-`thumbnail` を指定していない記事すべてに適用されます。
-（works, games, plans も同様）
-
-### Q. サイト名を変えたい
-
-**A.** `src/layouts/BaseLayout.astro` を開いて、以下の行を変更：
-
-```javascript
-const siteTitle = 'Game Planner Portfolio';  // ← ここを好きな名前に
-```
-
-### Q. ナビゲーションのタブを変えたい
-
-**A.** 同じファイルの `tabs` 配列を編集します：
-
-```javascript
-const tabs = [
-  { href: '/', label: '自己紹介', icon: '👤', id: 'about', color: 'var(--tab-about)' },
-  // label や icon を変更できる
-];
+<div style="font-size: 0.8rem; color: gray;">小さくてグレーの補足テキスト</div>
 ```
