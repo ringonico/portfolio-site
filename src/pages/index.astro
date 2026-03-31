@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
 import playedGames from '../data/played-games.json';
 
 // プロフィールMarkdownを読み込み
-const profileFiles = import.meta.glob('../content/profile/intro.md', { eager: true });
-const profileEntry = Object.values(profileFiles)[0] as any;
-const profileFrontmatter = profileEntry.frontmatter;
-const ProfileContent = profileEntry.Content;
+const profileCollection = await getCollection('profile');
+const profileEntry = profileCollection[0];
+const profileFrontmatter = profileEntry.data;
+const { Content: ProfileContent } = await render(profileEntry);
 
 // プレイゲームをジャンル別にグループ化
 const gamesByGenre: Record<string, typeof playedGames> = {};

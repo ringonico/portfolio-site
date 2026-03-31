@@ -42,6 +42,14 @@ const games = defineCollection({
   }),
 });
 
+const profile = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/profile' }),
+  schema: z.object({
+    name: z.string(),
+    catch: z.string().default(''),
+  }),
+});
+
 const plans = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/plans' }),
   schema: z.object({
@@ -56,4 +64,4 @@ const plans = defineCollection({
   }),
 });
 
-export const collections = { articles, works, games, plans };
+export const collections = { articles, works, games, plans, profile };
