@@ -18,6 +18,7 @@ const works = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/works' }),
   schema: z.object({
     title: z.string(),
+    date: z.string().default(''),
     summary: z.string().default(''),
     role: z.string().default(''),
     highlight: z.string().default(''),
@@ -32,6 +33,7 @@ const games = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/games' }),
   schema: z.object({
     title: z.string(),
+    date: z.string().default(''),
     summary: z.string().default(''),
     thumbnail: z.string().default('/images/games/default.png'),
     period: z.string().default(''),
@@ -54,6 +56,7 @@ const plans = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/plans' }),
   schema: z.object({
     title: z.string(),
+    date: z.string().default(''),
     summary: z.string().default(''),
     genre: z.string().default(''),
     purpose: z.string().default(''),

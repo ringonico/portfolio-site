@@ -9,11 +9,14 @@ const profileEntry = profileCollection[0];
 const profileFrontmatter = profileEntry.data;
 const { Content: ProfileContent } = await render(profileEntry);
 
-// プレイゲームをジャンル別にグループ化
+// プレイゲームをジャンル別にグループ化（各ジャンル内で追加日が新しい順）
 const gamesByGenre: Record<string, typeof playedGames> = {};
 for (const game of playedGames) {
   if (!gamesByGenre[game.genre]) gamesByGenre[game.genre] = [];
   gamesByGenre[game.genre].push(game);
+}
+for (const genre in gamesByGenre) {
+  gamesByGenre[genre].sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime());
 }
 const genreEntries = Object.entries(gamesByGenre);
 ---

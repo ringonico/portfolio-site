@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const allGames = (await getCollection('games')).sort((a, b) => a.data.order - b.data.order);
+const allGames = (await getCollection('games')).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 ---
 
 <BaseLayout title="制作ゲーム一覧" currentTab="games">
@@ -19,6 +21,9 @@ const allGames = (await getCollection('games')).sort((a, b) => a.data.order - b.
         <div class="card">
           <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-blue), var(--c-cyan));display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🎮</div>
           <div class="card-body">
+            {game.data.date && (
+              <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">📅 {game.data.date}</div>
+            )}
             <h3 class="card-title">{game.data.title}</h3>
             <p class="card-summary">{game.data.summary}</p>
             {game.data.period && (

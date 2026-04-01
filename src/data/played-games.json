@@ -1,288 +1,1790 @@
 [
-  { "name": "NieR:Automata", "genre": "アクション", "articleSlug": "" },
-  { "name": "SEKIRO: SHADOWS DIE TWICE", "genre": "アクション", "articleSlug": "" },
-  { "name": "ELDEN RING", "genre": "アクション", "articleSlug": "elden-ring-analysis" },
-  { "name": "DARK SOULS", "genre": "アクション", "articleSlug": "" },
-  { "name": "DARK SOULS III", "genre": "アクション", "articleSlug": "" },
-  { "name": "ARMORED CORE VI", "genre": "アクション", "articleSlug": "" },
-  { "name": "黒神話：悟空", "genre": "アクション", "articleSlug": "" },
-  { "name": "Sifu", "genre": "アクション", "articleSlug": "" },
-  { "name": "ENDER LILIES", "genre": "アクション", "articleSlug": "" },
-  { "name": "ENDER MAGNOLIA", "genre": "アクション", "articleSlug": "" },
-  { "name": "Lies of P", "genre": "アクション", "articleSlug": "" },
-  { "name": "Neon White", "genre": "アクション", "articleSlug": "" },
-  { "name": "Hollow Knight", "genre": "アクション", "articleSlug": "" },
-  { "name": "Void Sols", "genre": "アクション", "articleSlug": "" },
-  { "name": "Katana ZERO", "genre": "アクション", "articleSlug": "" },
-  { "name": "祇：Path of the Goddess", "genre": "アクション", "articleSlug": "" },
-  { "name": "It Takes Two", "genre": "アクション", "articleSlug": "" },
-  { "name": "スプリットフィクション", "genre": "アクション", "articleSlug": "" },
-  { "name": "ショベルナイト", "genre": "アクション", "articleSlug": "" },
-  { "name": "CARRION", "genre": "アクション", "articleSlug": "" },
-  { "name": "Ghostrunner", "genre": "アクション", "articleSlug": "" },
-  { "name": "Ghostrunner 2", "genre": "アクション", "articleSlug": "" },
-  { "name": "Pacific Drive", "genre": "アクション", "articleSlug": "" },
-  { "name": "Cuphead", "genre": "アクション", "articleSlug": "" },
-  { "name": "Dungeon Munchies", "genre": "アクション", "articleSlug": "" },
-  { "name": "SANABI", "genre": "アクション", "articleSlug": "" },
-  { "name": "Ori and the Will of the Wisps", "genre": "アクション", "articleSlug": "" },
-  { "name": "Nine Sols", "genre": "アクション", "articleSlug": "" },
-  { "name": "Celeste", "genre": "アクション", "articleSlug": "" },
-  { "name": "Ghost of Tsushima", "genre": "アクション", "articleSlug": "" },
-  { "name": "Getting Over It", "genre": "アクション", "articleSlug": "" },
-  { "name": "Only Up!", "genre": "アクション", "articleSlug": "" },
-  { "name": "Jump King", "genre": "アクション", "articleSlug": "" },
-  { "name": "ALTF4", "genre": "アクション", "articleSlug": "" },
-  { "name": "いもむし", "genre": "アクション", "articleSlug": "" },
-  { "name": "Get to Work", "genre": "アクション", "articleSlug": "" },
-  { "name": "Chained Together", "genre": "アクション", "articleSlug": "" },
-  { "name": "Echo Point Nova", "genre": "アクション", "articleSlug": "" },
-  { "name": "ヒューマン フォール フラット", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオブラザーズ", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオブラザーズ2", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオランド", "genre": "アクション", "articleSlug": "" },
-  { "name": "New スーパーマリオブラザーズ U", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオ オデッセイ", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオ 3Dワールド", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオブラザーズ ワンダー", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオメーカー", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオギャラクシー", "genre": "アクション", "articleSlug": "" },
-  { "name": "スーパーマリオギャラクシー2", "genre": "アクション", "articleSlug": "" },
-  { "name": "アストラルチェイン", "genre": "アクション", "articleSlug": "" },
-  { "name": "モンスターハンター4G", "genre": "アクション", "articleSlug": "" },
-  { "name": "モンスターハンターXX", "genre": "アクション", "articleSlug": "" },
-  { "name": "モンスターハンター:ワールド", "genre": "アクション", "articleSlug": "" },
-  { "name": "モンスターハンター ワイルズ", "genre": "アクション", "articleSlug": "" },
-  { "name": "ゼルダの伝説 時のオカリナ", "genre": "アクション", "articleSlug": "" },
-  { "name": "ゼルダの伝説 ムジュラの仮面", "genre": "アクション", "articleSlug": "" },
-  { "name": "ゼルダの伝説 スカイウォードソード", "genre": "アクション", "articleSlug": "" },
-  { "name": "ゼルダの伝説 神々のトライフォース2", "genre": "アクション", "articleSlug": "" },
-  { "name": "ゼルダの伝説 ブレス オブ ザ ワイルド", "genre": "アクション", "articleSlug": "" },
-  { "name": "ゼルダの伝説 ティアーズ オブ ザ キングダム", "genre": "アクション", "articleSlug": "zelda-totk-analysis" },
-  { "name": "ゼルダの伝説 知恵のかりもの", "genre": "アクション", "articleSlug": "" },
-  { "name": "新・光神話 パルテナの鏡", "genre": "アクション", "articleSlug": "" },
-  { "name": "メトロイド ドレッド", "genre": "アクション", "articleSlug": "" },
-  { "name": "マインクラフト ダンジョンズ", "genre": "アクション", "articleSlug": "" },
-  { "name": "ピクミン3", "genre": "アクション", "articleSlug": "" },
-  { "name": "ピクミン4", "genre": "アクション", "articleSlug": "" },
-  { "name": "レゴシティ アンダーカバー", "genre": "アクション", "articleSlug": "" },
-  { "name": "塊魂", "genre": "アクション", "articleSlug": "" },
-  { "name": "星のカービィ Wii", "genre": "アクション", "articleSlug": "" },
-  { "name": "星のカービィ トリプルデラックス", "genre": "アクション", "articleSlug": "" },
-  { "name": "星のカービィ ロボボプラネット", "genre": "アクション", "articleSlug": "" },
-  { "name": "星のカービィ スターアライズ", "genre": "アクション", "articleSlug": "" },
-  { "name": "星のカービィ ディスカバリー", "genre": "アクション", "articleSlug": "" },
-  { "name": "進撃の巨人2", "genre": "アクション", "articleSlug": "" },
-  { "name": "GRANBLUE FANTASY: Relink", "genre": "アクション", "articleSlug": "" },
-  { "name": "ホグワーツ・レガシー", "genre": "アクション", "articleSlug": "" },
-  { "name": "The Elder Scrolls V: Skyrim", "genre": "アクション", "articleSlug": "" },
-  { "name": "Grand Theft Auto V", "genre": "アクション", "articleSlug": "" },
-
-  { "name": "ドラゴンクエストIII", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ドラゴンクエストXI", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ドラゴンクエストビルダーズ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ドラゴンクエストライバルズ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "イナズマイレブン", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "イナズマイレブン2", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "イナズマイレブン3", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ポケットモンスター ブラック・ホワイト", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ポケットモンスター X・Y", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ポケットモンスター ソード・シールド", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ポケットモンスター スカーレット・バイオレット", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "Pokémon LEGENDS アルセウス", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ポケモンクエスト", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "妖怪ウォッチ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "妖怪ウォッチ2", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "妖怪ウォッチバスターズ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "OCTOPATH TRAVELER", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "OCTOPATH TRAVELER II", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "電波人間のRPG", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ファンタジーライフ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "FINAL FANTASY VII", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "FINAL FANTASY XV", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "FINAL FANTASY XVI", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ゼノブレイド", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ゼノブレイド2", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ゼノブレイド3", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ゼノブレイドクロス", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "龍が如く7", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ペルソナ3", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ペルソナ5", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "メタファー：リファンタジオ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "OMORI", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "UNDERTALE", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "リングフィット アドベンチャー", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ライザのアトリエ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "トトリのアトリエ", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "ミートピア", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "世界樹の迷宮", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "世界樹の迷宮II", "genre": "コマンドRPG", "articleSlug": "" },
-  { "name": "世界樹の迷宮III", "genre": "コマンドRPG", "articleSlug": "" },
-
-  { "name": "ダンガンロンパ", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "スーパーダンガンロンパ2", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "パラノマサイト", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "ドキドキ文芸部!", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "ウーマンコミュニケーション", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "グノーシア", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "7 Days to End with You", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Buckshot Roulette", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Slay the Princess", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Staffer Case", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "There Is No Game", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "NEEDY GIRL OVERDOSE", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "アイドルマスター スターリットシーズン", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Gorogoa", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "ゴースト トリック", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Baba Is You", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "未解決事件は終わらせないといけないから", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Patrick's Parabox", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "ElecHead", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Superliminal", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Portal", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "Portal 2", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "STEINS;GATE", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "GOODBYE WORLD", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "ブラック・ザ・フォール", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "進め！キノピオ隊長", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "空気読み。", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "マドリカ不動産", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "OneShot", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-  { "name": "都市伝説解体センター", "genre": "アドベンチャー・パズル", "articleSlug": "" },
-
-  { "name": "トライアングルストラテジー", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "ファイアーエムブレム 風花雪月", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "とびだせ どうぶつの森", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "あつまれ どうぶつの森", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Minecraft", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "パルワールド", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Satisfactory", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Lobotomy Corporation", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Timberborn", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Papers, Please", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Supermarket Simulator", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Thief Simulator", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Goat Simulator", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Omega Crafter", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "シヴィライゼーション6", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "シヴィライゼーション7", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Europa Universalis IV", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Starfield", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Steep", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "サブノーティカ", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "ARK: Survival Evolved", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "ASTRONEER", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "Besiege", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "にゃんこ大戦争", "genre": "シミュレーション", "articleSlug": "" },
-  { "name": "ナビつき！つくってわかる はじめてゲームプログラミング", "genre": "シミュレーション", "articleSlug": "" },
-
-  { "name": "BIOHAZARD RE:2", "genre": "ホラー", "articleSlug": "" },
-  { "name": "BIOHAZARD RE:3", "genre": "ホラー", "articleSlug": "" },
-  { "name": "BIOHAZARD RE:4", "genre": "ホラー", "articleSlug": "" },
-  { "name": "BIOHAZARD 7", "genre": "ホラー", "articleSlug": "" },
-  { "name": "BIOHAZARD VILLAGE", "genre": "ホラー", "articleSlug": "" },
-  { "name": "BIOHAZARD REVELATIONS", "genre": "ホラー", "articleSlug": "" },
-  { "name": "リトルナイトメア", "genre": "ホラー", "articleSlug": "" },
-  { "name": "リトルナイトメア2", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Shadow Corridor", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Shadow Corridor 2", "genre": "ホラー", "articleSlug": "" },
-  { "name": "SILENT HILL 2", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Poppy Playtime", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Ib", "genre": "ホラー", "articleSlug": "" },
-  { "name": "ミサイド", "genre": "ホラー", "articleSlug": "" },
-  { "name": "ウツロマユ", "genre": "ホラー", "articleSlug": "" },
-  { "name": "ラブラブスクールデイズ", "genre": "ホラー", "articleSlug": "" },
-  { "name": "夜廻", "genre": "ホラー", "articleSlug": "" },
-  { "name": "深夜廻", "genre": "ホラー", "articleSlug": "" },
-  { "name": "夜廻三", "genre": "ホラー", "articleSlug": "" },
-  { "name": "ルイージマンション", "genre": "ホラー", "articleSlug": "" },
-  { "name": "ルイージマンション2", "genre": "ホラー", "articleSlug": "" },
-  { "name": "ルイージマンション3", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Mannys", "genre": "ホラー", "articleSlug": "" },
-  { "name": "GYLT", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Dollmare", "genre": "ホラー", "articleSlug": "" },
-  { "name": "野狗子: Slitterhead", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Five Nights at Freddy's", "genre": "ホラー", "articleSlug": "" },
-  { "name": "At Dead Of Night", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Saiko no Sutoka", "genre": "ホラー", "articleSlug": "" },
-  { "name": "魔女の家", "genre": "ホラー", "articleSlug": "" },
-  { "name": "青鬼", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Phasmophobia", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Atomic Heart", "genre": "ホラー", "articleSlug": "" },
-  { "name": "偽夢", "genre": "ホラー", "articleSlug": "" },
-  { "name": "8番出口", "genre": "ホラー", "articleSlug": "" },
-  { "name": "赤マント", "genre": "ホラー", "articleSlug": "" },
-  { "name": "夜勤事件", "genre": "ホラー", "articleSlug": "" },
-  { "name": "地獄銭湯", "genre": "ホラー", "articleSlug": "" },
-  { "name": "事故物件", "genre": "ホラー", "articleSlug": "" },
-  { "name": "迷宮校舎", "genre": "ホラー", "articleSlug": "" },
-  { "name": "The Forest", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Dead Space", "genre": "ホラー", "articleSlug": "" },
-  { "name": "My Friendly Neighborhood", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Outlast", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Dying Light", "genre": "ホラー", "articleSlug": "" },
-  { "name": "零 ～月蝕の仮面～", "genre": "ホラー", "articleSlug": "" },
-  { "name": "INSIDE", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Paper Lily", "genre": "ホラー", "articleSlug": "" },
-  { "name": "Bramble: The Mountain King", "genre": "ホラー", "articleSlug": "" },
-
-  { "name": "Brotato", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Dead Cells", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Windblown", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "ダングリード", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "セフィリア", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Slay the Spire", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Roboquest", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Have a Nice Death", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Cult of the Lamb", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "ワイルドフロスト", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Nova Drift", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Cobalt Core", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Dicefolk", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "バックパックバトル", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Balatro", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Rogue Legacy 2", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "20 Minutes Till Dawn", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "デイヴ・ザ・ダイバー", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Skul: The Hero Slayer", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Vampire Survivors", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Noita", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "リトルノア 楽園の後継者", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Inscryption", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "常世ノ塔", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "ビビッドナイト", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Neon Abyss", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Risk of Rain 2", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Hades", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Hades II", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Enter the Gungeon", "genre": "ローグライク", "articleSlug": "" },
-  { "name": "Glyphica: Typing Survival", "genre": "ローグライク", "articleSlug": "" },
-
-  { "name": "Apex Legends", "genre": "対戦", "articleSlug": "" },
-  { "name": "フォートナイト", "genre": "対戦", "articleSlug": "" },
-  { "name": "PUBG", "genre": "対戦", "articleSlug": "" },
-  { "name": "ストリートファイター6", "genre": "対戦", "articleSlug": "" },
-  { "name": "スプラトゥーン", "genre": "対戦", "articleSlug": "" },
-  { "name": "スプラトゥーン2", "genre": "対戦", "articleSlug": "" },
-  { "name": "スプラトゥーン3", "genre": "対戦", "articleSlug": "" },
-  { "name": "オーバーウォッチ", "genre": "対戦", "articleSlug": "" },
-  { "name": "オーバーウォッチ 2", "genre": "対戦", "articleSlug": "" },
-  { "name": "Dead by Daylight", "genre": "対戦", "articleSlug": "" },
-  { "name": "THE FINALS", "genre": "対戦", "articleSlug": "" },
-  { "name": "マリオカート8", "genre": "対戦", "articleSlug": "" },
-  { "name": "ロケットリーグ", "genre": "対戦", "articleSlug": "" },
-  { "name": "ARMS", "genre": "対戦", "articleSlug": "" },
-  { "name": "世界のアソビ大全51", "genre": "対戦", "articleSlug": "" },
-  { "name": "1-2-Switch", "genre": "対戦", "articleSlug": "" },
-  { "name": "桃太郎電鉄", "genre": "対戦", "articleSlug": "" },
-  { "name": "大乱闘スマッシュブラザーズ for", "genre": "対戦", "articleSlug": "" },
-  { "name": "大乱闘スマッシュブラザーズ SPECIAL", "genre": "対戦", "articleSlug": "" },
-  { "name": "オバケイドロ!", "genre": "対戦", "articleSlug": "" },
-  { "name": "パワプロ", "genre": "対戦", "articleSlug": "" },
-  { "name": "Wii Sports Resort", "genre": "対戦", "articleSlug": "" },
-  { "name": "Nintendo Switch Sports", "genre": "対戦", "articleSlug": "" },
-  { "name": "テトリス99", "genre": "対戦", "articleSlug": "" },
-  { "name": "Among Us", "genre": "対戦", "articleSlug": "" },
-  { "name": "Call of Duty: Black Ops 6", "genre": "対戦", "articleSlug": "" },
-  { "name": "ニンジャラ2", "genre": "対戦", "articleSlug": "" }
+  {
+    "name": "NieR:Automata",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "SEKIRO: SHADOWS DIE TWICE",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ELDEN RING",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "DARK SOULS",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "DARK SOULS III",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ARMORED CORE VI",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "黒神話：悟空",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Sifu",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ENDER LILIES",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ENDER MAGNOLIA",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Lies of P",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Neon White",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Hollow Knight",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Void Sols",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Katana ZERO",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "祇：Path of the Goddess",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "It Takes Two",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スプリットフィクション",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ショベルナイト",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "CARRION",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Ghostrunner",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Ghostrunner 2",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Pacific Drive",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Cuphead",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dungeon Munchies",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "SANABI",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Ori and the Will of the Wisps",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Nine Sols",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Celeste",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Ghost of Tsushima",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Getting Over It",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Only Up!",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Jump King",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ALTF4",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "いもむし",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Get to Work",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Chained Together",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Echo Point Nova",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ヒューマン フォール フラット",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオブラザーズ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオブラザーズ2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオランド",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "New スーパーマリオブラザーズ U",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオ オデッセイ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオ 3Dワールド",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオブラザーズ ワンダー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオメーカー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオギャラクシー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーマリオギャラクシー2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "アストラルチェイン",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "モンスターハンター4G",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "モンスターハンターXX",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "モンスターハンター:ワールド",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "モンスターハンター ワイルズ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 時のオカリナ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 ムジュラの仮面",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 スカイウォードソード",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 神々のトライフォース2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼルダの伝説 知恵のかりもの",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "新・光神話 パルテナの鏡",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "メトロイド ドレッド",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "マインクラフト ダンジョンズ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ピクミン3",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ピクミン4",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "レゴシティ アンダーカバー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "塊魂",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "星のカービィ Wii",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "星のカービィ トリプルデラックス",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "星のカービィ ロボボプラネット",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "星のカービィ スターアライズ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "星のカービィ ディスカバリー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "進撃の巨人2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "GRANBLUE FANTASY: Relink",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ホグワーツ・レガシー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "The Elder Scrolls V: Skyrim",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Grand Theft Auto V",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ドラゴンクエストIII",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ドラゴンクエストXI",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ドラゴンクエストビルダーズ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ドラゴンクエストライバルズ",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "イナズマイレブン",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "イナズマイレブン2",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "イナズマイレブン3",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ポケットモンスター ブラック・ホワイト",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ポケットモンスター X・Y",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ポケットモンスター ソード・シールド",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ポケットモンスター スカーレット・バイオレット",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Pokémon LEGENDS アルセウス",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ポケモンクエスト",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "妖怪ウォッチ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "妖怪ウォッチ2",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "妖怪ウォッチバスターズ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "OCTOPATH TRAVELER",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "OCTOPATH TRAVELER II",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "電波人間のRPG",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ファンタジーライフ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "FINAL FANTASY VII",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "FINAL FANTASY XV",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "FINAL FANTASY XVI",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼノブレイド",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼノブレイド2",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼノブレイド3",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゼノブレイドクロス",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "龍が如く7",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ペルソナ3",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ペルソナ5",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "メタファー：リファンタジオ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "OMORI",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "UNDERTALE",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "リングフィット アドベンチャー",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ライザのアトリエ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "トトリのアトリエ",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ミートピア",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "世界樹の迷宮",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "世界樹の迷宮II",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "世界樹の迷宮III",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ダンガンロンパ",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スーパーダンガンロンパ2",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "パラノマサイト FILE23 本所七不思議",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ドキドキ文芸部!",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ウーマンコミュニケーション",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "グノーシア",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "7 Days to End with You",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Buckshot Roulette",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Slay the Princess",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Staffer Case",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "There Is No Game",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "NEEDY GIRL OVERDOSE",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "アイドルマスター スターリットシーズン",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Gorogoa",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ゴースト トリック",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Baba Is You",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "未解決事件は終わらせないといけないから",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Patrick's Parabox",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ElecHead",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Superliminal",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Portal",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Portal 2",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "STEINS;GATE",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "GOODBYE WORLD",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ブラック・ザ・フォール",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "進め！キノピオ隊長",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "空気読み。",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "マドリカ不動産",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "OneShot",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "都市伝説解体センター",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "トライアングルストラテジー",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ファイアーエムブレム 風花雪月",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "とびだせ どうぶつの森",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "あつまれ どうぶつの森",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Minecraft",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "パルワールド",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Satisfactory",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Lobotomy Corporation",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Timberborn",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Papers, Please",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Supermarket Simulator",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Thief Simulator",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Goat Simulator",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Omega Crafter",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "シヴィライゼーション6",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "シヴィライゼーション7",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Europa Universalis IV",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Starfield",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Steep",
+    "genre": "スポーツ",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "サブノーティカ",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ARK: Survival Evolved",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ASTRONEER",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Besiege",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "にゃんこ大戦争",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ナビつき！つくってわかる はじめてゲームプログラミング",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "BIOHAZARD RE:2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "BIOHAZARD RE:3",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "BIOHAZARD RE:4",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "BIOHAZARD 7",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "BIOHAZARD VILLAGE",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "BIOHAZARD REVELATIONS",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "リトルナイトメア",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "リトルナイトメア2",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Shadow Corridor",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Shadow Corridor 2",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "SILENT HILL 2",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Poppy Playtime",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Ib",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ミサイド",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ウツロマユ",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ラブラブスクールデイズ",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "夜廻",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "深夜廻",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "夜廻三",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ルイージマンション",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ルイージマンション2",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ルイージマンション3",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Mannys",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "GYLT",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dollmare",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "野狗子: Slitterhead",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Five Nights at Freddy's",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "At Dead Of Night",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Saiko no Sutoka",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "魔女の家",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "青鬼",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Phasmophobia",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Atomic Heart",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "偽夢",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "8番出口",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "赤マント",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "夜勤事件",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "地獄銭湯",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "事故物件",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "迷宮校舎",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "The Forest",
+    "genre": "シミュレーション／ストラテジー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dead Space",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "My Friendly Neighborhood",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Outlast",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dying Light",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "零 ～月蝕の仮面～",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "INSIDE",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Paper Lily",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Bramble: The Mountain King",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Brotato",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dead Cells",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Windblown",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ダングリード",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "セフィリア",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Slay the Spire",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Roboquest",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Have a Nice Death",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Cult of the Lamb",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ワイルドフロスト",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Nova Drift",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Cobalt Core",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dicefolk",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "バックパックバトル",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Balatro",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Rogue Legacy 2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "20 Minutes Till Dawn",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "デイヴ・ザ・ダイバー",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Skul: The Hero Slayer",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Vampire Survivors",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Noita",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "リトルノア 楽園の後継者",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Inscryption",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "常世ノ塔",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ビビッドナイト",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Neon Abyss",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Risk of Rain 2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Hades",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Hades II",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Enter the Gungeon",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Glyphica: Typing Survival",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Apex Legends",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "フォートナイト",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "PUBG",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ストリートファイター6",
+    "genre": "格闘",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スプラトゥーン",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スプラトゥーン2",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "スプラトゥーン3",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "オーバーウォッチ",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "オーバーウォッチ 2",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Dead by Daylight",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "THE FINALS",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "マリオカート8",
+    "genre": "レース",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ロケットリーグ",
+    "genre": "スポーツ",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ARMS",
+    "genre": "格闘",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "世界のアソビ大全51",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "1-2-Switch",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "桃太郎電鉄",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "大乱闘スマッシュブラザーズ for",
+    "genre": "格闘",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "大乱闘スマッシュブラザーズ SPECIAL",
+    "genre": "格闘",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "オバケイドロ!",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "パワプロ",
+    "genre": "スポーツ",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Wii Sports Resort",
+    "genre": "スポーツ",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Nintendo Switch Sports",
+    "genre": "スポーツ",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "テトリス99",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Among Us",
+    "genre": "パーティー",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Call of Duty: Black Ops 6",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "ニンジャラ2",
+    "genre": "シューティング",
+    "articleSlug": "",
+    "addedAt": "2026-04-01"
+  },
+  {
+    "name": "Slay the Spire 2",
+    "genre": "ボード / カード",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "ニューダンガンロンパV3",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "Öoo",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "Dyping Escape",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "BIOHAZARD 9",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "パラノマサイト FILE38 伊勢人魚物語",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "仁王３",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "IZON\\.",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "Return of the Obra Dinn",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "Hollow Knight: Silksong",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "SILENT HILL f",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "Wall World",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "Wall World 2",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "魔法少女ノ魔女裁判",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "BALL x PIT",
+    "genre": "パズル",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "DEATH STRANDING",
+    "genre": "アドベンチャー",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "絶対絶望少女",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  },
+  {
+    "name": "ファンタジーライフi グルグルの竜と時をぬすむ少女",
+    "genre": "RPG",
+    "articleSlug": "",
+    "addedAt": "2026-04-02"
+  }
 ]
