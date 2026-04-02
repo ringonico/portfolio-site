@@ -1786,5 +1786,23 @@
     "genre": "RPG",
     "articleSlug": "",
     "addedAt": "2026-04-02"
+  },
+  {
+    "name": "ドンキーコングバナンザ",
+    "genre": "アクション",
+    "articleSlug": "",
+    "addedAt": "2026-04-03"
+  },
+  {
+    "name": "マリオカートワールド",
+    "genre": "レース",
+    "articleSlug": "",
+    "addedAt": "2026-04-03"
+  },
+  {
+    "name": "マリオテニスフィーバー",
+    "genre": "スポーツ",
+    "articleSlug": "",
+    "addedAt": "2026-04-03"
   }
 ]
