@@ -21,11 +21,39 @@ const plansData = allPlans.map(p => ({
 <BaseLayout title="企画書一覧" currentTab="plans">
   <div class="page-header">
     <h1 style="color: var(--c-green);">📝 企画書一覧</h1>
-    <p class="subtitle">ゲームの企画書・コンセプトドキュメントです。クリックで詳細を表示します。</p>
+    <p class="subtitle">ゲームの企画書・コンセプトドキュメントです</p>
   </div>
 
   {allPlans.length === 0 ? (
-    <div class="empty-state">まだ企画書が登録されていません。</div>
+    <div class="coming-soon">
+      <span class="coming-soon-icon">📝</span>
+      <h3>現在執筆中です</h3>
+      <p>
+        オリジナルゲームの企画書を執筆しています。
+        完成次第、PDF付きで掲載します。
+      </p>
+      <div class="coming-soon-plans">
+        <span class="coming-soon-tag">📄 企画概要書</span>
+        <span class="coming-soon-tag">🎯 コンセプトシート</span>
+        <span class="coming-soon-tag">📊 ゲームデザインドキュメント</span>
+      </div>
+      <div class="roadmap-section">
+        <div class="roadmap-list">
+          <div class="roadmap-item active">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>アイデア出し・構想</strong> <span>— 進行中</span></p>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>企画書の執筆</strong> <span>— これから</span></p>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>PDF公開</strong> <span>— 近日公開</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
   ) : (
     <div class="card-grid">
       {allPlans.map((plan, index) => (
@@ -33,7 +61,7 @@ const plansData = allPlans.map(p => ({
           <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-green), var(--c-yellow));display:flex;align-items:center;justify-content:center;font-size:2.5rem;">📝</div>
           <div class="card-body">
             {plan.data.date && (
-              <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">📅 {plan.data.date}</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">{plan.data.date}</div>
             )}
             <h3 class="card-title">{plan.data.title}</h3>
             <p class="card-summary">{plan.data.summary}</p>
@@ -43,7 +71,7 @@ const plansData = allPlans.map(p => ({
               </div>
             )}
             <p style="font-size:0.8rem;color:var(--c-green);margin-top:0.5rem;font-weight:700;">
-              クリックして詳細を見る →
+              クリックして詳細を見る
             </p>
           </div>
         </div>
@@ -80,12 +108,11 @@ const plansData = allPlans.map(p => ({
         currentIndex = index;
         body.innerHTML = `
           <h2 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--c-green);margin-bottom:0.5rem;">${plan.title}</h2>
-          ${plan.date ? `<p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem;">📅 ${plan.date}</p>` : ''}
           ${plan.genre ? `<span class="tag" data-color="green" style="margin-bottom:1rem;display:inline-block;">${plan.genre}</span>` : ''}
           <p style="margin:0.8rem 0;">${plan.summary}</p>
-          ${plan.purpose ? `<p><strong>🎯 目的:</strong> ${plan.purpose}</p>` : ''}
-          ${plan.point ? `<p><strong>✨ ポイント:</strong> ${plan.point}</p>` : ''}
-          ${plan.pdfUrl ? `<a href="${plan.pdfUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;padding:0.5rem 1.2rem;background:var(--c-green);color:#fff;border-radius:var(--radius-sm);font-weight:700;">📄 PDFを見る</a>` : ''}
+          ${plan.purpose ? `<p><strong>目的:</strong> ${plan.purpose}</p>` : ''}
+          ${plan.point ? `<p><strong>ポイント:</strong> ${plan.point}</p>` : ''}
+          ${plan.pdfUrl ? `<a href="${plan.pdfUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;padding:0.5rem 1.2rem;background:var(--c-green);color:#fff;border-radius:var(--radius-sm);font-weight:700;">PDFを見る</a>` : ''}
         `;
         counter.textContent = `${index + 1} / ${plansData.length}`;
         prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';

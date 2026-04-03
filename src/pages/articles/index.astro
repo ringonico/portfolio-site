@@ -27,90 +27,125 @@ const searchData = allArticles.map(a => ({
     <p class="subtitle">ゲーム分析・企画コラム・制作記録などの記事です</p>
   </div>
 
-  <!-- 検索 -->
-  <div class="search-box">
-    <input type="text" class="search-input" id="article-search" placeholder="🔍 記事を検索..." />
-  </div>
-
-  <!-- タグフィルター -->
-  <div class="tag-filter" id="tag-filter">
-    <button class="tag-filter-btn active" data-tag="all">すべて</button>
-    {allTags.map(tag => (
-      <button class="tag-filter-btn" data-tag={tag}>{tag}</button>
-    ))}
-  </div>
-
-  <!-- 記事一覧 -->
-  <div class="card-grid" id="article-list">
-    {allArticles.map((article) => (
-      <a href={`/articles/${article.id}/`} class="card article-card" style="text-decoration:none;color:inherit;"
-         data-tags={JSON.stringify(article.data.tags)}
-         data-title={article.data.title}
-         data-summary={article.data.summary}>
-        <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-purple), var(--c-pink));display:flex;align-items:center;justify-content:center;font-size:2rem;">📰</div>
-        <div class="card-body">
-          <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">{article.data.date} / {article.data.category}</div>
-          <h3 class="card-title">{article.data.title}</h3>
-          <p class="card-summary">{article.data.summary}</p>
-          <div class="card-meta">
-            {article.data.tags.map((tag) => {
-              const colors = ['pink', 'orange', 'green', 'blue', 'purple', 'cyan'];
-              const color = colors[tag.length % colors.length];
-              return <span class="tag" data-color={color}>{tag}</span>;
-            })}
+  {allArticles.length === 0 ? (
+    <div class="coming-soon">
+      <span class="coming-soon-icon">📰</span>
+      <h3>記事を準備中です</h3>
+      <p>
+        プレイしたゲームの分析記事や、企画の考え方に関するコラムを執筆中です。
+        公開後はタグ検索やキーワード検索で記事を探せるようになります。
+      </p>
+      <div class="coming-soon-plans">
+        <span class="coming-soon-tag">🎮 ゲーム分析</span>
+        <span class="coming-soon-tag">💡 企画コラム</span>
+        <span class="coming-soon-tag">🔧 制作記録</span>
+        <span class="coming-soon-tag">📖 学習ログ</span>
+      </div>
+      <div class="roadmap-section">
+        <div class="roadmap-list">
+          <div class="roadmap-item active">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>記事の構成・執筆</strong> <span>— 進行中</span></p>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>初回記事の公開</strong> <span>— 近日公開</span></p>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>定期的な更新</strong> <span>— 継続予定</span></p>
           </div>
         </div>
-      </a>
-    ))}
-  </div>
+      </div>
+    </div>
+  ) : (
+    <>
+      <!-- 検索 -->
+      <div class="search-box">
+        <input type="text" class="search-input" id="article-search" placeholder="記事を検索..." />
+      </div>
 
-  <div class="empty-state" id="no-results" style="display:none;">
-    該当する記事が見つかりませんでした。
-  </div>
+      <!-- タグフィルター -->
+      <div class="tag-filter" id="tag-filter">
+        <button class="tag-filter-btn active" data-tag="all">すべて</button>
+        {allTags.map(tag => (
+          <button class="tag-filter-btn" data-tag={tag}>{tag}</button>
+        ))}
+      </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('article-search') as HTMLInputElement;
-      const tagFilter = document.getElementById('tag-filter')!;
-      const articleList = document.getElementById('article-list')!;
-      const noResults = document.getElementById('no-results')!;
-      const cards = Array.from(articleList.querySelectorAll('.article-card')) as HTMLElement[];
+      <!-- 記事一覧 -->
+      <div class="card-grid" id="article-list">
+        {allArticles.map((article) => (
+          <a href={`/articles/${article.id}/`} class="card article-card" style="text-decoration:none;color:inherit;"
+             data-tags={JSON.stringify(article.data.tags)}
+             data-title={article.data.title}
+             data-summary={article.data.summary}>
+            <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-purple), var(--c-pink));display:flex;align-items:center;justify-content:center;font-size:2rem;">📰</div>
+            <div class="card-body">
+              <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">{article.data.date} / {article.data.category}</div>
+              <h3 class="card-title">{article.data.title}</h3>
+              <p class="card-summary">{article.data.summary}</p>
+              <div class="card-meta">
+                {article.data.tags.map((tag) => {
+                  const colors = ['pink', 'orange', 'green', 'blue', 'purple', 'cyan'];
+                  const color = colors[tag.length % colors.length];
+                  return <span class="tag" data-color={color}>{tag}</span>;
+                })}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
 
-      let activeTag = 'all';
+      <div class="empty-state" id="no-results" style="display:none;">
+        該当する記事が見つかりませんでした。
+      </div>
 
-      function filterArticles() {
-        const query = searchInput.value.toLowerCase().trim();
-        let visibleCount = 0;
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const searchInput = document.getElementById('article-search') as HTMLInputElement;
+          const tagFilter = document.getElementById('tag-filter')!;
+          const articleList = document.getElementById('article-list')!;
+          const noResults = document.getElementById('no-results')!;
+          const cards = Array.from(articleList.querySelectorAll('.article-card')) as HTMLElement[];
 
-        cards.forEach(card => {
-          const title = (card.getAttribute('data-title') || '').toLowerCase();
-          const summary = (card.getAttribute('data-summary') || '').toLowerCase();
-          const tags: string[] = JSON.parse(card.getAttribute('data-tags') || '[]');
+          let activeTag = 'all';
 
-          const matchesTag = activeTag === 'all' || tags.includes(activeTag);
-          const matchesSearch = !query || title.includes(query) || summary.includes(query) || tags.some(t => t.toLowerCase().includes(query));
+          function filterArticles() {
+            const query = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
 
-          if (matchesTag && matchesSearch) {
-            card.style.display = '';
-            visibleCount++;
-          } else {
-            card.style.display = 'none';
+            cards.forEach(card => {
+              const title = (card.getAttribute('data-title') || '').toLowerCase();
+              const summary = (card.getAttribute('data-summary') || '').toLowerCase();
+              const tags: string[] = JSON.parse(card.getAttribute('data-tags') || '[]');
+
+              const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+              const matchesSearch = !query || title.includes(query) || summary.includes(query) || tags.some(t => t.toLowerCase().includes(query));
+
+              if (matchesTag && matchesSearch) {
+                card.style.display = '';
+                visibleCount++;
+              } else {
+                card.style.display = 'none';
+              }
+            });
+
+            noResults.style.display = visibleCount === 0 ? '' : 'none';
           }
+
+          searchInput.addEventListener('input', filterArticles);
+
+          tagFilter.addEventListener('click', (e) => {
+            const btn = (e.target as HTMLElement).closest('.tag-filter-btn') as HTMLElement;
+            if (!btn) return;
+            activeTag = btn.getAttribute('data-tag') || 'all';
+            tagFilter.querySelectorAll('.tag-filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterArticles();
+          });
         });
-
-        noResults.style.display = visibleCount === 0 ? '' : 'none';
-      }
-
-      searchInput.addEventListener('input', filterArticles);
-
-      tagFilter.addEventListener('click', (e) => {
-        const btn = (e.target as HTMLElement).closest('.tag-filter-btn') as HTMLElement;
-        if (!btn) return;
-        activeTag = btn.getAttribute('data-tag') || 'all';
-        tagFilter.querySelectorAll('.tag-filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        filterArticles();
-      });
-    });
-  </script>
+      </script>
+    </>
+  )}
 </BaseLayout>

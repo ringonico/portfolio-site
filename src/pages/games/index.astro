@@ -7,14 +7,43 @@ const allGames = (await getCollection('games')).sort(
 );
 ---
 
-<BaseLayout title="制作ゲーム一覧" currentTab="games">
+<BaseLayout title="個人制作物" currentTab="games">
   <div class="page-header">
-    <h1 style="color: var(--c-blue);">🎮 制作ゲーム一覧</h1>
-    <p class="subtitle">個人制作・チーム制作のゲームをまとめています</p>
+    <h1 style="color: var(--c-blue);">🎮 個人制作物</h1>
+    <p class="subtitle">個人で制作したゲームやツールをまとめています</p>
   </div>
 
   {allGames.length === 0 ? (
-    <div class="empty-state">まだゲームが登録されていません。</div>
+    <div class="coming-soon">
+      <span class="coming-soon-icon">🎮</span>
+      <h3>現在制作中です</h3>
+      <p>
+        現在ゲームやツールの制作に取り組んでいます。
+        完成次第、プレイ可能なリンクや説明と合わせて掲載します。
+      </p>
+      <div class="coming-soon-plans">
+        <span class="coming-soon-tag">🕹 プレイアブルなデモ</span>
+        <span class="coming-soon-tag">🎯 担当範囲の説明</span>
+        <span class="coming-soon-tag">🛠 使用ツール・技術</span>
+        <span class="coming-soon-tag">📖 制作過程の記録</span>
+      </div>
+      <div class="roadmap-section">
+        <div class="roadmap-list">
+          <div class="roadmap-item active">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>企画・設計</strong> <span>— 進行中</span></p>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>プロトタイプ制作</strong> <span>— これから</span></p>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot"></span>
+            <p class="roadmap-text"><strong>完成・掲載</strong> <span>— 近日公開</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
   ) : (
     <div class="card-grid">
       {allGames.map((game) => (
@@ -22,18 +51,18 @@ const allGames = (await getCollection('games')).sort(
           <div class="card-thumb" style="background: linear-gradient(135deg, var(--c-blue), var(--c-cyan));display:flex;align-items:center;justify-content:center;font-size:2.5rem;">🎮</div>
           <div class="card-body">
             {game.data.date && (
-              <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">📅 {game.data.date}</div>
+              <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.2rem;">{game.data.date}</div>
             )}
             <h3 class="card-title">{game.data.title}</h3>
             <p class="card-summary">{game.data.summary}</p>
             {game.data.period && (
               <p style="font-size:0.85rem;color:var(--text-light);margin-top:0.4rem;">
-                📅 {game.data.period}
+                {game.data.period}
               </p>
             )}
             {game.data.role && (
               <p style="font-size:0.85rem;color:var(--text-light);">
-                🎯 {game.data.role}
+                {game.data.role}
               </p>
             )}
             <div class="card-meta">
@@ -44,7 +73,7 @@ const allGames = (await getCollection('games')).sort(
             {game.data.url ? (
               <a href={game.data.url} target="_blank" rel="noopener noreferrer"
                 style="display:inline-block;margin-top:0.8rem;padding:0.4rem 1rem;background:var(--c-blue);color:#fff;border-radius:var(--radius-sm);font-family:var(--font-heading);font-weight:700;font-size:0.85rem;">
-                🔗 プレイする
+                プレイする
               </a>
             ) : (
               <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.8rem;">（公開URL準備中）</p>

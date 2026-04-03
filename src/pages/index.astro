@@ -9,12 +9,21 @@ const profileEntry = profileCollection[0];
 const profileFrontmatter = profileEntry.data;
 const { Content: ProfileContent } = await render(profileEntry);
 
-// プレイゲームをジャンル別にグループ化（各ジャンル内で追加日が新しい順）
+// プレイゲーム統計
+const totalGames = playedGames.length;
 const gamesByGenre: Record<string, typeof playedGames> = {};
 for (const game of playedGames) {
   if (!gamesByGenre[game.genre]) gamesByGenre[game.genre] = [];
   gamesByGenre[game.genre].push(game);
 }
+const genreCount = Object.keys(gamesByGenre).length;
+
+// ジャンル別ソート（多い順に上位5つ）
+const topGenres = Object.entries(gamesByGenre)
+  .sort((a, b) => b[1].length - a[1].length)
+  .slice(0, 5);
+
+// 全ジャンルエントリ（詳細表示用）
 for (const genre in gamesByGenre) {
   gamesByGenre[genre].sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime());
 }
@@ -22,38 +31,156 @@ const genreEntries = Object.entries(gamesByGenre);
 ---
 
 <BaseLayout title="自己紹介" currentTab="about">
-  <div class="profile-hero">
-    <h1>{profileFrontmatter.name}</h1>
-    <p class="catch">{profileFrontmatter.catch}</p>
-  </div>
 
-  <div class="profile-section">
-    <div class="content">
-      <ProfileContent />
+  <!-- ===== 1. ヒーロー：私は誰か ===== -->
+  <section class="hero-section">
+    <p class="hero-title-label">{profileFrontmatter.title}</p>
+    <h1 class="hero-name">{profileFrontmatter.name}</h1>
+    <p class="hero-oneliner">{profileFrontmatter.oneLiner}</p>
+    <div class="hero-cta">
+      <a href="#strengths" class="cta-btn cta-primary">強みを見る</a>
+      <a href="#about" class="cta-btn cta-secondary">自己紹介を読む</a>
+      <a href="/articles/" class="cta-btn cta-secondary">記事を読む</a>
     </div>
-  </div>
+  </section>
 
-  <h2 class="section-title blue">🎮 プレイしたゲーム一覧</h2>
-  <p style="color: var(--text-light); margin-bottom: 1.5rem; font-size: 0.9rem;">
-    私が遊んだゲームをジャンル別にまとめています。<span style="color: var(--c-blue); font-weight: 700;">青いタイトル</span>をクリックすると分析記事が読めます。
-  </p>
+  <!-- ===== 2. 何ができるか：強みカード ===== -->
+  <section id="strengths">
+    <h2 class="section-title pink">強み</h2>
+    <div class="strength-grid">
+      {profileFrontmatter.strengths.map((s) => (
+        <div class="strength-card">
+          <span class="strength-icon">{s.icon}</span>
+          <h3 class="strength-label">{s.label}</h3>
+          <p class="strength-desc">{s.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
 
-  <div class="played-games-by-genre">
-    {genreEntries.map(([genre, games]) => (
-      <div class="genre-block">
-        <h3 class="genre-title">{genre}</h3>
-        <ul class="genre-list">
-          {games.map((game) => (
-            <li>
-              {game.articleSlug ? (
-                <a href={`/articles/${game.articleSlug}/`} class="game-link-title">{game.name}</a>
-              ) : (
-                <span class="game-plain-title">{game.name}</span>
-              )}
-            </li>
-          ))}
-        </ul>
+  <!-- ===== 3. 何を考えているか：自己紹介（要約＋展開） ===== -->
+  <section id="about">
+    <h2 class="section-title pink">自己紹介</h2>
+    <div class="profile-section">
+      <p class="profile-summary">
+        「ネームドのゲームプランナーになる」という大きな目標に向かって、
+        仕事の傍ら独学でゲーム制作・企画書執筆・プレイ分析を続けています。
+        体力とやる気を武器に、空き時間を全て成長に投資中。
+        このサイトは、その軌跡を記録するブログ兼ポートフォリオです。
+      </p>
+      <details class="profile-details">
+        <summary class="profile-toggle">全文を読む</summary>
+        <div class="profile-full content">
+          <ProfileContent />
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== 4. ポートフォリオ＆ブログ導線 ===== -->
+  <section id="navigation">
+    <h2 class="section-title orange">コンテンツ</h2>
+    <p class="section-lead">ポートフォリオとブログ、それぞれの入口です。気になるカテゴリからご覧ください。</p>
+    <div class="nav-cards">
+      <div class="nav-card-group">
+        <h3 class="nav-group-label">ポートフォリオ</h3>
+        <div class="nav-card-row">
+          <a href="/works/" class="nav-card" style="--nav-accent: var(--c-orange);">
+            <span class="nav-card-icon">💼</span>
+            <div>
+              <h4>実績一覧</h4>
+              <p>業務・プロジェクトの実績</p>
+            </div>
+            <span class="nav-card-status preparing">準備中</span>
+          </a>
+          <a href="/games/" class="nav-card" style="--nav-accent: var(--c-blue);">
+            <span class="nav-card-icon">🎮</span>
+            <div>
+              <h4>個人制作物</h4>
+              <p>個人で制作したゲームやツール</p>
+            </div>
+            <span class="nav-card-status preparing">準備中</span>
+          </a>
+          <a href="/plans/" class="nav-card" style="--nav-accent: var(--c-green);">
+            <span class="nav-card-icon">📝</span>
+            <div>
+              <h4>企画書</h4>
+              <p>ゲーム企画書・コンセプト</p>
+            </div>
+            <span class="nav-card-status preparing">準備中</span>
+          </a>
+        </div>
       </div>
-    ))}
-  </div>
+      <div class="nav-card-group">
+        <h3 class="nav-group-label">ブログ・分析</h3>
+        <div class="nav-card-row">
+          <a href="/articles/" class="nav-card" style="--nav-accent: var(--c-purple);">
+            <span class="nav-card-icon">📰</span>
+            <div>
+              <h4>記事</h4>
+              <p>ゲーム分析・企画コラム・制作記録</p>
+            </div>
+            <span class="nav-card-status preparing">準備中</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. プレイゲーム（要約表示） ===== -->
+  <section id="played-games">
+    <h2 class="section-title blue">プレイ済みゲーム</h2>
+    <div class="games-summary-card">
+      <div class="games-stats">
+        <div class="stat-item">
+          <span class="stat-number">{totalGames}</span>
+          <span class="stat-label">本プレイ</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">{genreCount}</span>
+          <span class="stat-label">ジャンル</span>
+        </div>
+      </div>
+      <div class="games-top-genres">
+        <h3>得意ジャンル TOP5</h3>
+        <div class="genre-bar-list">
+          {topGenres.map(([genre, games]) => (
+            <div class="genre-bar-item">
+              <span class="genre-bar-label">{genre}</span>
+              <div class="genre-bar-track">
+                <div class="genre-bar-fill" style={`width: ${Math.round((games.length / totalGames) * 100)}%`}></div>
+              </div>
+              <span class="genre-bar-count">{games.length}本</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <p class="games-note">
+        ジャンルを横断した幅広いプレイ経験から、面白さの構造や体験設計の引き出しを日々増やしています。
+      </p>
+    </div>
+
+    <details class="games-details">
+      <summary class="profile-toggle">全{totalGames}本の一覧を見る</summary>
+      <div class="played-games-by-genre">
+        {genreEntries.map(([genre, games]) => (
+          <div class="genre-block">
+            <h3 class="genre-title">{genre}<span class="genre-count">({games.length})</span></h3>
+            <ul class="genre-list">
+              {games.map((game) => (
+                <li>
+                  {game.articleSlug ? (
+                    <a href={`/articles/${game.articleSlug}/`} class="game-link-title">{game.name}</a>
+                  ) : (
+                    <span class="game-plain-title">{game.name}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </details>
+  </section>
+
 </BaseLayout>

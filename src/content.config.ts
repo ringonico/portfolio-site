@@ -49,6 +49,13 @@ const profile = defineCollection({
   schema: z.object({
     name: z.string(),
     catch: z.string().default(''),
+    title: z.string().default(''),
+    oneLiner: z.string().default(''),
+    strengths: z.array(z.object({
+      icon: z.string(),
+      label: z.string(),
+      description: z.string(),
+    })).default([]),
   }),
 });
 
